@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 export class Success extends Component {
   continue = e => {
@@ -25,6 +25,9 @@ export class Success extends Component {
         <React.Fragment>
             <AppBar position="static">
                 <Toolbar>
+                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
                     <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography, styles.root}>
                         Success
                     </Typography>

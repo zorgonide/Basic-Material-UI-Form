@@ -7,6 +7,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Typography from '@material-ui/core/Typography';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 export class FormPersonalDetails extends Component {
     continue = e => { 
@@ -28,6 +30,9 @@ export class FormPersonalDetails extends Component {
                 <React.Fragment>
                     <AppBar position="static">
                         <Toolbar>
+                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                                <MenuIcon />
+                            </IconButton>
                             <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography, styles.root}>
                                 Confirm Data
                             </Typography>
