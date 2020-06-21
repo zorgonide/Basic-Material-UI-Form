@@ -23,25 +23,15 @@ export class FormPersonalDetails extends Component {
     }
     render() {
         const { values, handleChange} = this.props;
-        const useStyles = makeStyles((theme) => ({
-            root: {
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              '& > *': {
-                margin: theme.spacing(1),
-              },
-            },
-          }));
-        const classes = useStyles;
+        const classes = this.props;
         return (
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar position="static">
                         <Toolbar>
-                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon />
-                            </IconButton>
+                            </IconButton> */}
                             <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography && styles.root}>
                             Enter Personal Details
                             </Typography>

@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-
 export class FormUserDetails extends Component {
     continue = e => { 
         e.preventDefault();
@@ -18,22 +17,9 @@ export class FormUserDetails extends Component {
     }
     render() {
         const { values, handleChange} = this.props;
-        const useStyles = makeStyles((theme) => ({
-            root: {
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              '& > *': {
-                margin: theme.spacing(1),
-                flexGrow: 1
-              },
-              typography: {
-                align: "center"
-              }
-            },
-          }));
-        const classes = useStyles;
+        const classes = this.props;
         return (
+            
             <MuiThemeProvider>
                 <React.Fragment>
                     <AppBar position="static">
@@ -46,6 +32,7 @@ export class FormUserDetails extends Component {
                             </Typography>
                         </Toolbar>
                     </AppBar>
+                    
                     <TextField
                         label = "Enter Your First Name"
                         floatingLabelText = "First Name"

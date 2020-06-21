@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import './App.css';
 import { UserForm } from './components/UserForm';
+import Particles from 'react-particles-js'; 
 
 export class App extends Component {
   render() {
     return (
-      <div className="App">
-        <UserForm />         
-      </div>
+      <div className="App"> 
+        <UserForm />
+    </div> 
     )
   }
 }
