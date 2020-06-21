@@ -42,7 +42,7 @@ export class FormPersonalDetails extends Component {
                             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon />
                             </IconButton>
-                            <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography, styles.root}>
+                            <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography && styles.root}>
                             Enter Personal Details
                             </Typography>
                         </Toolbar>

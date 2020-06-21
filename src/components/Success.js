@@ -25,9 +25,9 @@ export class Success extends Component {
         <React.Fragment>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
-                    </IconButton>
+                    </IconButton> */}
                     <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography, styles.root}>
                         Success
                     </Typography>

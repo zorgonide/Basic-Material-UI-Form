@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+
 export class FormUserDetails extends Component {
     continue = e => { 
         e.preventDefault();
@@ -37,10 +38,10 @@ export class FormUserDetails extends Component {
                 <React.Fragment>
                     <AppBar position="static">
                         <Toolbar>
-                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                                 <MenuIcon />
-                            </IconButton>
-                            <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography, styles.root}>
+                            </IconButton> */}
+                            <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography && styles.root}>
                                 Enter User Details
                             </Typography>
                         </Toolbar>
