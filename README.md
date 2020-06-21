@@ -4,7 +4,6 @@
 
 To - Do   
 1. Add Form Validation
-2. Center 3rd Page
 
 ## Quick Start
 
