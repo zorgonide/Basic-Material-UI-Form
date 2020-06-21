@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Grid from '@material-ui/core/Grid'
 
 export class FormPersonalDetails extends Component {
     continue = e => { 
@@ -30,35 +31,47 @@ export class FormPersonalDetails extends Component {
                 <React.Fragment>
                     <AppBar position="static">
                         <Toolbar>
-                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                                 <MenuIcon />
-                            </IconButton>
-                            <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography, styles.root}>
+                            </IconButton> */}
+                            <Typography  variant="h6" align="inherit" className={classes.title} style={styles.typography && styles.root}>
                                 Confirm Data
                             </Typography>
                         </Toolbar>
                     </AppBar>
-                    <List position="static" style={styles.root, styles.typography}>
-                        <ListItem>
-                            <ListItemText primary="First Name" secondary={firstname} />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemText primary="Last Name" secondary={lastname} />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemText primary="Email" secondary={email} />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemText primary="Occupation" secondary={occupation} />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemText primary="City" secondary={city} />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemText primary="Bio" secondary={bio} />
-                        </ListItem>
-                    </List>
-                    <br></br>
+                    <Grid
+                        container
+                        spacing={0}
+                        direction="column"
+                        alignItems="center"
+                        >
+
+                        <Grid item xs={3}>
+                            <List position="static" style={styles.root, styles.list}>
+                                <ListItem>
+                                    <ListItemText primary="First Name" secondary={firstname} />
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText primary="Last Name" secondary={lastname} />
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText primary="Email" secondary={email} />
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText primary="Occupation" secondary={occupation} />
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText primary="City" secondary={city} />
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText primary="Bio" secondary={bio} />
+                                </ListItem>
+                            </List>
+                        </Grid>   
+
+                    </Grid> 
+                    
+                    {/* <br></br> */}
                     <ButtonGroup color="secondary" aria-label="outlined secondary button group" style={styles.button}>
                         <Button color="primary"
                             primary="true"
@@ -82,6 +95,9 @@ const styles ={
         flexGrow: 1
     },
     typography: {
+        align: "center"
+    },
+    list: {
         align: "center"
     }
 };
